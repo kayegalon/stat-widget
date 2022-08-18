@@ -1,0 +1,165 @@
+:root {
+	--color-flame: #ea5d29;
+	--color-sunglow-smoke: #f6d146;
+	--color-sail: #b4e1ff;
+	--color-armadillo: #4a4a4a;
+	--color-aluminum: #999999;
+	--color-medium-sea-green: #30bb64;
+	--font-size-main: 18px;
+	--font-size-big: 62px;
+}
+
+@font-face {
+	font-family: inter;
+	src: url(Inter/Inter-VariableFont_slnt,wght.ttf);
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	color: var(--color-aluminum);
+	font-family: inter;
+	font-size: var(--font-size-main);
+	padding-top: 10rem;
+	padding-left: 10rem;
+	padding-right: 10rem;
+}
+
+#widgets {
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 3fr);
+	gap: 2rem;
+	align-items: center;
+}
+
+.widget-item {
+	border: 3px solid;
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+.revenue {
+	border-color: var(--color-flame);
+}
+
+.orders {
+	border-color: var(--color-sunglow-smoke);
+}
+
+.customers {
+	border-color: var(--color-sail);
+}
+
+.heading, .stat {
+	display: flex;
+	justify-content: space-between;
+}
+
+.category {
+	display: inline-flex;
+	align-items: center;
+}
+
+.bar {
+	border: 1px;
+	width: 5px;
+	height: 20px;
+	border-radius: 5px;
+}
+
+.title {
+	margin-left: .5rem;
+}
+
+.revenue .bar {
+	background-color: var(--color-flame);
+}
+
+.orders .bar {
+	background-color: var(--color-sunglow-smoke);
+}
+
+.customers .bar {
+	background-color: var(--color-sail);
+}
+
+.green {
+	color: var(--color-medium-sea-green);
+	font-weight: 600;
+}
+
+.number {
+	text-align: right;
+	font-size: var(--font-size-big);
+	color: white;
+	margin-top: -3rem;
+	margin-bottom: -3rem;
+}
+
+.stat-bars {
+	display: flex;
+	margin-top: 1.1rem;
+	justify-content: space-evenly;
+}
+
+.stat-bars .bar {
+	background-color: var(--color-armadillo);
+	margin-right: .3rem;
+}
+
+.revenue2 {
+	height: 10px;
+	margin-top: .6rem;
+}
+
+.revenue4 {
+	height: 18px;
+	margin-top: .2rem;
+}
+
+.revenue5{
+	height: 15px;
+	margin-top: .4rem;
+}
+
+.orders2 {
+	height: 8px;
+	margin-top: .8rem;
+}
+
+.orders3, .customers3 {
+	height: 24px;
+	margin-top: -.2rem;
+}
+
+.orders4, .customers4 {
+	height: 17px;
+	margin-top: .3rem;
+}
+
+.orders5, .customers5 {
+	height: 10px;
+	margin-top: .7rem;
+}
+
+.customers2 {
+	height: 10px;
+	margin-top: .6rem;
+}
+
+/* MOBILE SCREENS */
+@media (max-width: 800px) {
+	body {
+		padding: 2rem;
+	}
+	
+	#widgets {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
